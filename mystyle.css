@@ -1,0 +1,616 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
+/* Base Hbox and VBox */
+
+.hbox
+{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+.hbox > *
+{
+    margin:1px;  
+}
+
+.vbox
+{
+    display:flex;
+    flex-direction:column;
+}
+
+.vbox > *
+{
+    padding-top:1px;
+    padding-bottom:1px;  
+}
+
+
+/* HBox Child  Elements Horizontal Gap */
+
+.hbox.hgap2 > *
+{
+
+    margin:2px;  
+}
+
+.hbox.hgap4 > *
+{
+
+    margin:4px;  
+}
+
+.hbox.hgap6 > *
+{
+    margin:6px;  
+}
+
+.hbox.hgap8 > *
+{
+    margin:8px;  
+}
+
+.hbox.hgap10 > *
+{
+    margin:10px;  
+}
+
+.hbox.hgap12 > *
+{
+    margin:12px;  
+}
+
+.hbox.hgap15 > *
+{
+    margin:15px;  
+}
+
+/* VBox Child  Elements Vertical Gap */
+
+
+.vbox.vgap15 > *
+{
+    padding-top:15px;
+    padding-bottom:15px;  
+}
+
+.vbox.vgap12 > *
+{
+    padding-top:15px;
+    padding-bottom:12px;  
+}
+
+.vbox.vgap10 > *
+{
+    padding-top:10px;
+    padding-bottom:10px;  
+}
+
+.vbox.vgap8 > *
+{
+    padding-top:8px;
+    padding-bottom:8px;  
+}
+
+.vbox.vgap6 > *
+{
+    padding-top:6px;
+    padding-bottom:6px;  
+}
+
+.vbox.vgap4 > *
+{
+    padding-top:4px;
+    padding-bottom:4px;  
+}
+
+.vbox.vgap2 > *
+{
+    padding-top:2px;
+    padding-bottom:2px;  
+}
+
+/* HBox Child  Elements Alignment */
+
+.vbox.left,
+.hbox.left,
+.hbox.left > * {
+  justify-content: flex-start;
+  margin-right: auto;
+}
+
+.vbox.center,
+.hbox.center,
+.hbox.center > * {
+  justify-content: center;
+  
+}
+
+.vbox.right,
+.hbox.right,
+.hbox.right > * {
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.hbox.middle,
+.hbox.middle > * {
+  align-content: center;
+}
+
+.hbox.bottom,
+.hbox.bottom > * {
+  justify-content: flex-end;
+}
+
+/* VBox Child  Elements Alignment */
+
+.vbox.top {
+    justify-content: flex-start;
+  }
+  
+.vbox.middle,
+.vbox.middle > * {
+align-content: center;
+}
+
+.vbox.bottom {
+justify-content: flex-end;
+}
+  
+/* HBox VBox Child  Width */
+
+.vbox.wp100,
+.hbox.wp100 {
+  flex : none;
+  width: 100%
+}
+
+.vbox.wp90,
+.hbox.wp90 {
+  flex : none;
+  width: 90%
+}
+
+.vbox.wp75,
+.hbox.wp75 {
+  flex : none;
+  width: 75%
+}
+
+.vbox.wp50,
+.hbox.wp50 {
+  flex : none;
+  width: 50%
+}
+
+.vbox.wp25,
+.hbox.wp25 {
+  flex : none;
+  width: 25%
+}
+
+/* HBox VBox Scroll */
+
+.vbox.hscroll,
+.hbox.hscroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.vbox.vscroll,
+.hbox.vscroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* HBox VBox Left,Right Gap */
+
+.hbox.lrmar,
+.vbox.lrmar
+{
+    padding-left:10px;
+    padding-right:10px;  
+}
+
+.hbox.grey {
+  border-bottom:1px #b7b7b7 solid;
+}
+
+.whitebg {
+    background-color: white;
+}
+
+.topmenubg {
+    background-color: #f7f7f7;
+}
+
+.hrbg {
+    border-top: 1px solid red;
+}
+
+.bodybg {
+    background-color: #ffffff;
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+.bodymar {
+    margin: 0px;
+    overflow-x: hidden !important;
+    
+}
+
+body, button, input, select, textarea {
+    font-family: "Muli","Helvetica Neue",Arial,sans-serif;
+}
+.vreemobg {
+    background-color: #ffffff;
+}
+
+.greybg {
+    background-color: #5f5f5f;
+}
+
+.greybg2 {
+    background-color: #bebebe;
+}
+
+.greybg3 {
+    background-color: #f2f2f2;
+}
+
+.greybottombg {
+    background-color: #404040
+}
+
+.orangebg1 {
+    background-color: #FFC000;
+}
+
+.vcenter{
+    vertical-align: middle
+}
+
+.vertical-center {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.statscard {
+    background-color: #FFC000;
+    border-radius: .25rem;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+    color: #4a4a4a;
+    max-width: 100%;
+    position: relative;
+}
+
+.vremodevopscard {
+    background-color: #ffffff;
+    border-radius: .25rem;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+    color: #fff9f9;
+    max-width: 100%;
+}
+
+.vremocard {
+    background-color: #d59fee;
+    border-radius: .25rem;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+    color: #fff9f9;
+    max-width: 100%;
+    position: relative;
+}
+
+.reemotitle {
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #363636;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.reemosmalltitle {
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #363636;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.reemotinytitle {
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #363636;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.whitetext{
+    color:#ffffff;
+}
+
+.reemotinytitlewhite {
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.reemotinytext {
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #363636;
+    font-size: 1.0rem;
+    font-weight: 300;  
+    margin-top: 11px;
+    margin-bottom: 25px;
+    padding-left: 0px;
+    padding-right: 10%;
+    text-align: justify;
+}
+
+.reemotinytextwhite {
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1.0rem;
+    font-weight: 300;  
+    margin-top: 11px;
+    margin-bottom: 25px;
+    padding-left: 0px;
+    padding-right: 10%;
+    text-align: justify;
+}
+
+.reemotext {
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #363636;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.reemosmalltext {
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #363636;
+    font-size: 1.0rem;
+    font-weight: 300;  
+    margin-top: 11px;
+    margin-bottom: 5px;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: justify;
+}
+
+
+.topfix {
+    position: sticky;
+    top: 0px;
+    bottom:auto;
+    z-index: 200;
+}
+
+.bottomfix {
+    position: sticky;
+    top: auto;
+    bottom:0px;
+    z-index: 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-30 {
+    width: 30%;
+    margin: 15px;
+    padding: 15px;
+
+}
+
+.flex-50 {
+    width: 50%;
+    margin: 5px;
+    padding: 5px;
+}
+  
+.flex-left {
+    width: 40%;
+    margin: 5px;
+    padding: 5px;
+}
+  
+.flex-right {
+    width: 50%;
+}
+
+
+#hamnav {
+    height: 100%;
+}
+
+    /* (B) HORIZONTAL MENU ITEMS */
+#hamitems { display: flex; 
+    margin-top: 20px;
+    font-style: bold;
+}
+
+#hamitems a {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-top: 20px;
+    padding-left: 20px;
+    color: #404040;
+    text-decoration: none;
+    text-align: center;
+}
+#hamitems a:hover { color: #F07F09; }
+
+
+#hamnav label, #hamburger { display: none; }
+
+.vimg {
+    height: auto;
+    width: 100%;
+}
+
+.vremoimg {
+    height: auto;
+    width: 293px;
+}
+
+  .vremocardimg {
+    height: auto;
+    width: 50%;
+}
+
+    /* [ON SMALL SCREENS] */
+    @media screen and (max-width: 768px){
+        /* (A) BREAK INTO VERTICAL MENU */
+
+        #hamitems a {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            /*border-top: 1px solid #333;
+            margin-top: 15px;*/
+        }
+        #hamitems a:hover { color: #F07F09; }
+        /* (B) SHOW HAMBURGER ICON */
+        #hamnav label { 
+            display: inline-block; 
+            color: #404040;
+            font-style: normal;
+            font-size: 1.2em;
+            padding: 2px;
+        }
+
+        /* (C) TOGGLE SHOW/HIDE MENU */
+        #hamitems { display: none; }
+        #hamnav input:checked ~ #hamitems { display: block; }
+
+        .vertical-center {
+            margin: 0;
+            position: relative;
+
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+          }
+          
+          .flex-left {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 15px;
+
+          }
+          
+          .flex-right {
+            width: 100%;
+            height: 100%;
+            margin-top: 15px;
+          }
+
+          .flex-50 {
+            width: 100%;
+            height: 100%;
+            margin-top: 15px;
+          }
+
+          .flex-30 {
+            width: 90%;
+            height: 100%;
+            margin-top: 15px;
+            padding: 5px;
+          }
+
+    }
+
+/*******************************
+           Statistic
+*******************************/
+
+/* Standalone */
+
+.ui.statistic {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 1em 0em;
+  max-width: auto;
+}
+
+.ui.statistic + .ui.statistic {
+  margin: 0em 0em 0em 1.5em;
+}
+
+.ui.statistic:first-child {
+  margin-top: 0em;
+}
+
+.ui.statistic:last-child {
+  margin-bottom: 0em;
+}
+
+/*--------------
+      Value
+---------------*/
+
+.ui.statistics .statistic > .value,
+.ui.statistic > .value {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 4rem;
+  font-weight: normal;
+  line-height: 1em;
+  color: #1B1C1D;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*--------------
+     Label
+---------------*/
+
+.ui.statistics .statistic > .label,
+.ui.statistic > .label {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.87);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+
+/*-------------------
+
+  Text Link
+
+--------------------*/
+
+.txtlink{
+flex-grow: 1;
+flex-basis: 0;
+margin-top: 20px;
+padding-left: 0px;
+color: #404040;
+text-decoration: bold;
+text-align: left;
+}
+.txtlink:hover { color: #F07F09; }
