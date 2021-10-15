@@ -5,7 +5,11 @@
 
 .hbox
 {
-    display:flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
     flex-direction:row;
     flex-wrap: wrap;
 }
@@ -17,8 +21,8 @@
 
 .vbox
 {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
 
 .vbox > *
@@ -148,6 +152,7 @@
 /* VBox Child  Elements Alignment */
 
 .vbox.top {
+    margin-top: auto; 
     justify-content: flex-start;
   }
   
@@ -236,8 +241,9 @@ justify-content: flex-end;
     font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 .bodymar {
-    margin: 0px;
+    margin :0;
     overflow-x: hidden !important;
+    overflow-y: auto !important;
     
 }
 
@@ -392,6 +398,7 @@ body, button, input, select, textarea {
 
 
 .topfix {
+    position: -webkit-sticky;
     position: sticky;
     top: 0px;
     bottom:auto;
@@ -406,7 +413,15 @@ body, button, input, select, textarea {
 }
 
 .flex-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     flex-direction: row;
 }
 
@@ -534,6 +549,12 @@ body, button, input, select, textarea {
             margin-top: 15px;
             padding: 5px;
           }
+
+          .vremocardimg {
+            display: inline-block;
+            max-width: 100%;
+            height: 129px;
+        }
 
     }
 
