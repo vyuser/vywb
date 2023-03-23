@@ -1,0 +1,1354 @@
+
+/* Base Hbox and VBox */
+@font-face {
+    font-family: 'Hubot Sans';
+    src:
+      url('./Hubot-Sans.woff2') format('woff2 supports variations'),
+      url('./Hubot-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+}
+
+html {
+    font-family: 'Hubot Sans';
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+}
+
+body {
+    font-family: 'Hubot Sans';
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+
+}
+
+
+/*-------------------
+  
+    Text Link
+  
+  --------------------*/
+  
+/*.txtlink{
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-top: 20px;
+    padding-left: 0px;
+    color: #404040;
+    text-decoration: bold;
+    text-align: left;
+}*/
+
+
+.bodytext {
+    font-size: min(15vw, 20px);
+    font-weight: 400;
+    font-stretch: 100%;
+    font-variation-settings: "ital" 0, "wdth" 75;
+    outline: 0px;
+    margin-top: 15px;
+    padding-left: 0px;
+    text-decoration: none;
+    color: #585353;
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: justify;
+}
+
+
+
+.txtlink {
+    font-size: min(15vw, 20px);
+    font-weight: 400;
+    font-stretch: 75%;
+    font-variation-settings: "ital" 0, "wdth" 75;
+    outline: 0px;
+    margin-top: 15px;
+    padding-left: 0px;
+    text-decoration: none;
+    color: #404040;
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: left;
+}
+
+
+
+.txtlink:hover {
+    color: #F07F09;
+}
+
+.medium-narrow {
+    font-size: min(15vw, 40px);
+    font-weight: 500;
+    font-stretch: 75%;
+    font-variation-settings: "ital" 0, "wdth" 75;
+    outline: 0px;
+}
+
+.news-banner-txt {
+    font-size: min(15vw, 35px);
+    font-weight: 400;
+    font-stretch: 75%;
+    font-variation-settings: "ital" 0, "wdth" 75;
+    outline: 0px;
+    color: #ffe;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header5 {
+    font-size: min(15vw, 20px);
+    font-weight: 500;
+    font-stretch: 75%;
+    font-variation-settings: "ital" 0, "wdth" 75;
+    outline: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header4 {
+    font-size: min(15vw, 25px);
+    
+    font-stretch: 75%;
+    font-variation-settings: "ital" 0, "wdth" 75;
+    outline: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header3 {
+    font-size: min(15vw, 30px);
+    font-weight: 500;
+    font-stretch: 75%;
+    font-variation-settings: "ital" 0, "wdth" 75;
+    outline: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header2 {
+    font-size: min(15vw, 35px);
+    font-weight: 500;
+    font-stretch: 75%;
+    font-variation-settings: "ital" 0, "wdth" 75;
+    outline: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header1-notop {
+    font-size: min(15vw, 45px);
+    font-weight: 500;
+    font-stretch: 75%;
+    font-variation-settings: "ital" 0, "wdth" 75;
+    outline: 0px;
+    margin-bottom: 10px;
+}
+
+.header1 {
+    font-size: min(15vw, 45px);
+    font-weight: 500;
+    font-stretch: 75%;
+    font-variation-settings: "ital" 0, "wdth" 75;
+    outline: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.grey-text {
+    color:#4a4a4a;
+}
+
+/* Colors */
+.base-color {
+    color :#5b5675;
+} 
+
+.light-color {
+    color :#FDFCFC;
+} 
+
+.primary-color {
+    color :#4F08A9;
+}
+
+.secondary-color {
+    color :#0C78D1;
+}
+
+.yellow-color {
+    color :#ffc000;
+}
+
+.light-border-color {
+    color :#DDC4FC;
+}
+
+.text-heading-color {
+    color :#010123;
+}
+
+.dark-border-color {
+    color :#4F08A9;
+}
+
+
+ 
+
+
+.overlap-nav-menu {
+    z-index: 500;
+}
+
+.desktop-nav{
+    display: block;
+}
+
+
+.mobile-nav-menu{
+    display: none;
+}
+
+.mobile-nav{
+    display: none;
+}
+
+.link-button{
+
+    font-size: min(15vw, 20px);
+    font-weight: 400;
+    font-stretch: 75%;
+    font-variation-settings: "ital" 0, "wdth" 75;
+    padding: 10px 40px;
+    text-align: center;
+    border-radius: 100px;
+    border: 2px solid #504ED5;
+    position: relative;
+    background-color: #504ED5;
+    box-sizing: border-box;
+    text-decoration:none;
+    color:#FFFFFF;
+    transition: all 0.2s;
+    border-color:#fffffe;
+}
+.link-button:hover{
+    color: #F07F09;
+    background-color: #fffffe;
+    border-color: #F07F09
+
+}
+    
+
+
+.wrapper .nav-links{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    top: 0;
+    left: -100%;
+    background: #242526;
+    display: block;
+    padding: 50px 10px;
+    line-height: 50px;
+    overflow-y: auto;
+    box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+    transition: all 0.3s ease;
+  }
+
+
+.statscard {
+
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+    color: #4a4a4a;
+    max-width: 80%;
+    border-radius: 1rem;
+    border: solid;
+    border-width: 1px;
+    border-color: #4a4a4a;
+    padding: 20px;
+    position: relative;
+}
+
+.vremodevopscard {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+    color: #fff9f9;
+    max-width: 100%;
+}
+
+.vremocard {
+    background-color: #d59fee;
+    border-radius: .25rem;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+    color: #fff9f9;
+    max-width: 100%;
+    position: relative;
+}
+
+.reemotitle {
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #363636;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.reemosmalltitle {
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #363636;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.reemotinytitle {
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #363636;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.whitetext{
+    color:#ffffff;
+}
+
+.reemotinytitlewhite {
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.reemotinytext {
+    color: #363636;
+    font-size: 1.0rem;
+    font-weight: 300;  
+    margin-top: 11px;
+    margin-bottom: 25px;
+    padding-left: 0%;
+    padding-right: 10%;
+    text-align: justify;
+}
+
+.reemotinytextwhite {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 300;  
+    margin-top: 11px;
+    margin-bottom: 25px;
+    padding-left: 0px;
+    padding-right: 10%;
+    text-align: justify;
+    text-decoration: none;
+}
+
+.text08rem {
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 300;  
+    margin-top: 11px;
+    margin-bottom: 25px;
+    padding-left: 0px;
+    padding-right: 10%;
+    text-align: justify;
+    text-decoration: none;
+}
+
+.reemotext {
+    color: #363636;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.reemosmalltext {
+    font-family: 'Hubot Sans';
+    color: #363636;
+    font-size: 1.0rem;
+    font-weight: 400;  
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: justify;
+}
+
+/*-------------------
+
+  Text Link
+
+--------------------*/
+li {
+    list-style: none;
+}
+
+
+.txt-col-white {
+    color : #ffffff;
+}
+
+
+  .desktop-nav-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .desktop-nav-content a {
+    float: none;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  
+  
+  .desktop-nav:hover .desktop-nav-content {
+    display: block;
+    transition: all 0.3s ease;
+    
+  }
+
+
+/* Background Color */
+
+.hboxgrey {
+    border-bottom:1px #b7b7b7 solid;
+  }
+  
+  .white-bg {
+      background-color: #ffffff;
+  }
+  
+  .topmenubg {
+      background-color: #f7f7f7;
+  }
+
+  .main-pg-hero-bg {
+    background-color: #F2F2F2
+  }
+  
+  .hrbg {
+      border-top: 1px solid red;
+  }
+  
+  .bodybg {
+      background-color: #ffffff;
+      
+  }
+  .bodymar {
+      margin-top :0;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+      
+  }
+
+  .align-right {
+    right: 0;
+  }
+  
+  
+  .vreemobg {
+      background-color: #ffffff;
+  }
+  
+  .greybg {
+      background-color: #5f5f5f;
+  }
+  
+  .greybg2 {
+      background-color: #bebebe;
+  }
+  
+  .greybg3 {
+      background-color: #f2f2f2;
+  }
+
+  .lightbluebg3 {
+    background-color: #ecf7ff;
+  }
+  
+  .greybottombg {
+      background-color: #404040
+  }
+
+  .dark-purple {
+    background-color: #3d0683;
+  }
+
+  .dark-black {
+    background-color: #010123;
+  }
+  
+  .orangebg1 {
+      background-color: #FFC000;
+  }
+
+  
+
+  .bg-sq-img{
+    background-image: url(../svg/bg-pattern-square.svg);
+}
+
+
+.vreemo-logo-small {
+    display: none;
+}
+
+
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 900px){
+    /* (A) BREAK INTO VERTICAL MENU */
+
+    .link-button{
+        display:block;
+        margin-left:auto;
+        margin-top:10px;
+      
+    }
+
+    .vreemo-logo-big {
+        display: none;
+    }
+
+    .vreemo-logo-small {
+        display: block;
+    }
+
+    .vremocardimg {
+        display: inline-block;
+        max-width: 100%;
+        height: 129px;
+    }
+
+    .reemotinytext {
+       
+        padding-left: 10%;
+
+    }
+
+    .reemotinytitle {
+
+        text-align: center;
+    }
+
+    .medium-narrow {
+        font-size: min(15vw, 30px);
+        font-weight: 500;
+        font-stretch: 75%;
+        font-variation-settings: "ital" 0, "wdth" 75;
+        outline: 0px;
+    }
+
+    .news-banner-txt {
+        font-size: min(15vw, 35px);
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .txt-color-white {
+        color: #fffffe;
+    }
+
+    .header1 {
+        text-align: center;
+    }
+
+    h1 {
+
+        text-align: center;
+    }
+
+    .mobile-nav-menu{
+        display: none;
+        position: fixed;
+        max-width: 350px;
+        width: 250px;
+        top: 0;
+        padding-right: 40px;
+        overflow-y: auto;
+        z-index: 500;
+        height: 100%;
+        background-color: #fff;
+        right: 0;
+    }
+
+    .mobile-dropdown-content {
+        display: none;
+       
+        padding: 10px;
+      }
+    
+    .mobile-nav{
+        top: 0;
+        right: 0;
+        margin-right: 10px;
+        display: block;
+    }
+    
+    .desktop-nav{
+        display: none;
+    }
+    
+    .header1{
+        
+        padding-top: 30px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .header2,
+    .header3,
+    .header4{
+        
+        padding-top: 20px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+    .reemosmalltext {  
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: justify;
+    }
+    
+
+}
+  
+
+
+
+/*hbox-vbox*/
+
+.hbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hbox>* {
+    margin: 1px;
+}
+
+.vbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.vbox>* {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.hbox.debug,
+.hbox.debug>*,
+.vbox.debug,
+.vbox.debug>* {
+    border: 1px red solid;
+}
+
+
+
+.vreemo-logo {
+    width: 100%;
+    height: auto;
+}
+/* HBox Child  Elements Horizontal Gap */
+
+.vbox.hgap2,
+.hbox.hgap2>* {
+
+    margin-left: 2px;
+}
+
+.vbox.hgap4,
+.hbox.hgap4>* {
+
+    margin-left: 4px;
+}
+
+.vbox.hgap5,
+.hbox.hgap5>* {
+
+    margin-left: 5px;
+}
+
+.vbox.hgap6,
+.hbox.hgap6>* {
+    margin-left: 6px;
+}
+
+.vbox.hgap8,
+.hbox.hgap8>* {
+    margin-left: 8px;
+}
+
+.vbox.hgap10,
+.hbox.hgap10>* {
+    margin-left: 10px;
+}
+
+.vbox.hgap12,
+.hbox.hgap12>* {
+    margin-left: 12px;
+}
+
+.vbox.hgap15,
+.hbox.hgap15>* {
+    margin-left: 15px;
+}
+
+.vbox.hgap20,
+.hbox.hgap20>* {
+    margin-left: 20px;
+}
+
+.vbox.hgap30,
+.hbox.hgap30>* {
+    margin-left: 30px;
+}
+
+/* VBox Child  Elements Vertical Gap */
+
+.hbox.tgap0,
+.hbox.tgap0 > * {
+    margin-top: 0;
+}
+
+.hbox.tgap5,
+.hbox.tgap5 > * {
+    margin-top: 5px;
+}
+
+.hbox.tgap10,
+.hbox.tgap10 > * {
+    margin-top: 10px;
+}
+
+.hbox.tgap20,
+.hbox.tgap20 > * {
+    margin-top: 20px;
+}
+
+.hbox.tgap25,
+.hbox.tgap25 > * {
+    margin-top: 25px;
+}
+
+.hbox.tgap30,
+.hbox.tgap30 > * {
+    margin-top: 30px;
+}
+
+.hbox.bgap0,
+.hbox.bgap0 > * {
+    margin-bottom: 0;
+}
+
+.hbox.bgap5,
+.hbox.bgap5 > * {
+    margin-bottom: 5px;
+}
+
+.hbox.bgap10,
+.hbox.bgap10 > * {
+    margin-bottom: 10px;
+}
+
+.hbox.bgap20,
+.hbox.bgap20 > * {
+    margin-bottom: 20px;
+}
+
+.hbox.bgap25,
+.hbox.bgap25 > * {
+    margin-bottom: 25px;
+}
+
+.hbox.bgap30,
+.hbox.bgap30 > * {
+    margin-bottom: 30px;
+}
+
+
+.hbox.vgap20,
+.vbox.vgap20>* {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hbox.vgap15,
+.vbox.vgap15>* {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.hbox.vgap12,
+.vbox.vgap12>* {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.hbox.vgap10,
+.vbox.vgap10>* {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hbox.vgap8,
+.vbox.vgap8>* {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.hbox.vgap6,
+.vbox.vgap6>* {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.hbox.vgap4,
+.vbox.vgap4>* {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.hbox.vgap2,
+.vbox.vgap2>* {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* HBox Child  Elements Alignment */
+
+.item-center {
+    align-items: center;
+}
+
+.hbox.leftonly,
+.hbox.leftonly>*
+.hbox.left,
+.hbox.left>* {
+   
+    margin-right: auto;
+}
+
+
+
+
+.hbox.rightonly,
+.hbox.rightonly >*,
+.hbox.right,
+.hbox.right>* {
+   
+    margin-left: auto;
+}
+
+
+
+.hbox.bottom,
+.hbox.bottom>*,
+.vbox.bottom {
+    justify-content: flex-end;
+}
+
+/* VBox Child  Elements Alignment */
+
+.vbox.top {
+    /*margin-top: auto;*/
+    justify-content: flex-start;
+}
+
+.hbox.hcenter,
+.hbox.hcenter > *,
+.vbox.vcenter
+{
+    justify-content: center;
+}
+
+
+.hbox.txtleft,
+.hbox.txtleft > *
+{
+    margin-right: auto;
+}
+
+
+/* HBox VBox Child  Width */
+
+.vbox.wp100,
+.hbox.wp100 {
+    flex: none;
+    width: 100%
+}
+
+.vbox.wp90,
+.hbox.wp90only,
+.hbox.wp90 {
+    flex: none;
+    width: 90%
+}
+
+.vbox.wp85,
+.hbox.wp85 {
+    flex: none;
+    width: 85%
+}
+
+.vbox.wp80,
+.hbox.wp80 {
+    flex: none;
+    width: 80%
+}
+
+
+.vbox.wp75,
+.hbox.wp75 {
+    flex: none;
+    width: 75%
+}
+
+.hbox.wpp75 {
+    flex: none;
+    width: 75%
+}
+
+.vbox.wp60,
+.hbox.wp60 {
+    flex: none;
+    width: 60%
+}
+
+.vbox.wp50,
+.hbox.wp50 {
+    flex: none;
+    width: 50%
+}
+
+.vbox.wp45,
+.hbox.wp45 {
+    flex: none;
+    width: 45%
+}
+
+
+.vbox.wp40,
+.hbox.wp40 {
+    flex: none;
+    width: 40%
+}
+
+.vbox.wp30,
+.hbox.wp30 {
+    flex: none;
+    width: 30%
+}
+
+.vbox.wp25,
+.hbox.wp25 {
+    flex: none;
+    width: 25%
+}
+
+.vbox.wp20,
+.hbox.wp20 {
+    flex: none;
+    width: 20%
+}
+
+.vbox.wp15,
+.hbox.wp15 {
+    flex: none;
+    width: 15%
+}
+
+/* HBox VBox Scroll */
+
+.vbox.hscroll,
+.hbox.hscroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.vbox.vscroll,
+.hbox.vscroll {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* HBox VBox Left,Right Gap */
+
+.hbox.lrmar,
+.vbox.lrmar {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.hbox.grey {
+    border-bottom: 1px #b7b7b7 solid;
+}
+
+.whitebg {
+    background-color: white;
+}
+
+.nobg {
+    background-color: none;
+}
+
+/* Top fix and Bottom fix */
+.topfix {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    bottom:auto;
+    z-index: 200;
+}
+
+.bottomfix {
+    position: sticky;
+    top: auto;
+    bottom:0px;
+    z-index: 0;
+}
+
+.alignCenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 900px) {
+    /* (A) BREAK INTO VERTICAL MENU */
+
+    .vbox.wp100,
+    .hbox.wp100,
+    .vbox.wp90,
+    .hbox.wp90,
+    .vbox.wp85,
+    .hbox.wp85,
+    .vbox.wp80,
+    .hbox.wp80,
+    .vbox.wp75,
+    .hbox.wp75,
+    .vbox.wp60,
+    .hbox.wp60,
+    .vbox.wp50,
+    .hbox.wp50,
+    .vbox.wp45,
+    .hbox.wp45,
+    .vbox.wp40,
+    .hbox.wp40,
+    .vbox.wp30,
+    .hbox.wp30,
+    .vbox.wp25,
+    .hbox.wp25,
+    .vbox.wp20,
+    .hbox.wp20,
+    .vbox.wp15,
+    .hbox.wp15
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hbox.wp90only {
+        display: flex;
+        width: 100%;
+    }
+
+    .vbox.left,
+    .hbox.left,
+    .hbox.left > *,
+    .hbox.right > *,
+    .vbox.right,
+    .hbox.right,
+    .hbox.right>* {
+        flex: none;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .hbox.leftonly,
+    .hbox.leftonly > * {
+        flex : none;
+    }
+
+    .hbox-rightonly,
+    .hbox.rightonly>* {
+        flex: none;
+  
+    }
+}
+
+/* img */
+
+/**
+
+Site specific styles
+
+**/
+
+.v-dia-desktop {
+    height: auto;
+    width: 100%;
+}
+
+.v-wk-person {
+    width: 100%;
+    max-height: 50%;
+    padding-left: 50px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    right: 0;
+    position:relative;
+}
+
+.vreemo-dia {
+    height: auto;
+    width: 100%;
+}
+
+.vreemo-banner {
+    height: auto;
+    width: 100%;
+}
+
+.vreemo-icon-w50 {
+    height: 50%;
+    width: 50%;
+}
+
+.vreemo-icon-w25 {
+    height: auto;
+    width: 25px;
+}
+
+.vreemo-img-w100 {
+    height: auto;
+    width: 90%;
+}
+
+.vreemo-devops-dia {
+    height: auto;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vreemo-orange-purple-bg {
+    height: 100%;
+    width: 100%;
+}
+
+.vreemo-orange-purple-bg-hero {
+    height: 70%;
+    width: 100%;
+}
+
+.vreemo-blue-bg {
+    height: 100%;
+    width: 100%;
+}
+
+.vReemo-blue-new-banner{
+    background-color: #504ED5;
+}
+
+.vreemo-blue-line {
+    height: 100%;
+    width: 100%;
+}
+
+.overlap-50 {
+    z-index: 6;
+    margin-top: -100px;
+}
+
+.overlap-100-vyakto {
+    z-index: 8;
+    margin-top: -180px;
+}
+
+.overlap-250 {
+    z-index: 110;
+    margin-top: -250px;
+}
+
+.overlap-350 {
+    z-index: 120;
+    margin-top: -350px;
+}
+
+.overlap-450 {
+    z-index: 5;
+    margin-top: -570px;
+}
+
+
+.vimg {
+    height: auto;
+    width: 100%;
+}
+
+.vremoimg {
+    height: auto;
+    width: 293px;
+}
+
+.vremocardimg {
+    height: auto;
+    width: 50%;
+}
+
+.keybenefitsimg85 {
+    height: 60px;
+    width: auto;
+}
+
+.keybenefitsimg95 {
+    height: 95px;
+    width: auto;
+}
+
+.atReimoDiaImg {
+    height: auto;
+    width: 80%;
+}
+
+.contactusImg {
+    height: 80%;
+    width: auto;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 970px){
+    .vreemo-orange-purple-bg {
+        height: 120px;
+        width: 100%;
+    }
+    .vreemo-orange-purple-bg-hero {
+        height: 300px;
+        width: 100%;
+    }
+
+    .vreemo-blue-bg {
+        height: 200px;
+        width: 100%;
+    }
+
+    .overlap-50 {
+        z-index: 6;
+        margin-top: -10px;
+    }
+
+    .overlap-100-vyakto {
+        z-index: 8;
+        margin-top: -280px;
+    }
+
+    .overlap-250 {
+        z-index: 110;
+        margin-top: -75px;
+    }
+
+    .overlap-350 {
+        z-index: 120;
+        margin-top: -320px;
+    }
+
+
+
+    .overlap-450 {
+        z-index: 5;
+        margin-top: -150px;
+    }
+
+    .atReimoDiaImg {
+        height: auto;
+        width: 90%;
+    }
+
+    .contactusImg {
+        height: 90%;
+        width: auto;
+        padding-bottom: 20px;
+    }
+    
+    
+}
+
+
+@media screen and (min-width: 971px) and (max-width: 1400px){
+    .vreemo-orange-purple-bg {
+        height: 100%;
+        width: 100%;
+    }
+    .vreemo-orange-purple-bg-hero {
+        height: 100%;
+        width: 100%;
+    }
+
+    .vreemo-blue-bg {
+        height: 100%;
+        width: 100%;
+    }
+
+    .overlap-50 {
+        z-index: 6;
+        margin-top: -10px;
+    }
+
+    .overlap-100-vyakto {
+        z-index: 8;
+        margin-top: -280px;
+    }
+
+    .overlap-250 {
+        z-index: 110;
+        margin-top: -75px;
+    }
+
+    .overlap-350 {
+        z-index: 120;
+        margin-top: -300px;
+    }
+
+
+
+    .overlap-450 {
+        z-index: 5;
+        margin-top: -300px;
+    }
+    
+}
+

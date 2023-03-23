@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <!-- Standard Meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">-->
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- add to homescreen for ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- Site Properities -->
+    <title>atReimo Remote working platform</title>
+    <link rel="stylesheet" href="./svg/new-images/privacy-censent/cookieconsent.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="./css/vyakto-final-style.css" />
+  </head>
+
+  <body class="bodybg bodymar">
+    <!-- privacy consent-->
+
+    <script src="./svg/new-images/privacy-censent/cookieconsent.js"></script>
+    <script>
+      window.addEventListener('load', function(){
+
+          // obtain plugin
+          var cc = initCookieConsent();
+
+          // run plugin with your configuration
+          cc.run({
+              current_lang: 'en',
+              autoclear_cookies: true,                   // default: false
+              page_scripts: true,                        // default: false
+
+              // mode: 'opt-in'                          // default: 'opt-in'; value: 'opt-in' or 'opt-out'
+              // delay: 0,                               // default: 0
+              // auto_language: '',                      // default: null; could also be 'browser' or 'document'
+              // autorun: true,                          // default: true
+              // force_consent: false,                   // default: false
+              // hide_from_bots: false,                  // default: false
+              // remove_cookie_tables: false             // default: false
+              // cookie_name: 'cc_cookie',               // default: 'cc_cookie'
+              // cookie_expiration: 182,                 // default: 182 (days)
+              // cookie_necessary_only_expiration: 182   // default: disabled
+              // cookie_domain: location.hostname,       // default: current domain
+              // cookie_path: '/',                       // default: root
+              // cookie_same_site: 'Lax',                // default: 'Lax'
+              // use_rfc_cookie: false,                  // default: false
+              // revision: 0,                            // default: 0
+
+              onFirstAction: function(user_preferences, cookie){
+                  // callback triggered only once on the first accept/reject action
+              },
+
+              onAccept: function (cookie) {
+                  // callback triggered on the first accept/reject action, and after each page load
+              },
+
+              onChange: function (cookie, changed_categories) {
+                  // callback triggered when user changes preferences after consent has already been given
+              },
+
+              languages: {
+                  'en': {
+                      consent_modal: {
+                          title: 'We use cookies!',
+                          description: 'Hi, this website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it. The latter will be set only after consent. <button type="button" data-cc="c-settings" class="cc-link">Let me choose</button>',
+                          primary_btn: {
+                              text: 'Accept all',
+                              role: 'accept_all'              // 'accept_selected' or 'accept_all'
+                          },
+                          secondary_btn: {
+                              text: 'Reject all',
+                              role: 'accept_necessary'        // 'settings' or 'accept_necessary'
+                          }
+                      },
+                      settings_modal: {
+                          title: 'Cookie preferences',
+                          save_settings_btn: 'Save settings',
+                          accept_all_btn: 'Accept all',
+                          reject_all_btn: 'Reject all',
+                          close_btn_label: 'Close',
+                          cookie_table_headers: [
+                              {col1: 'Name'},
+                              {col2: 'Domain'},
+                              {col3: 'Expiration'},
+                              {col4: 'Description'}
+                          ],
+                          blocks: [
+                              {
+                                  title: 'Cookie usage 📢',
+                                  description: 'I use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#" class="cc-link">privacy policy</a>.'
+                              }, {
+                                  title: 'Strictly necessary cookies',
+                                  description: 'These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly',
+                                  toggle: {
+                                      value: 'necessary',
+                                      enabled: true,
+                                      readonly: true          // cookie categories with readonly=true are all treated as "necessary cookies"
+                                  }
+                              }, {
+                                  title: 'Performance and Analytics cookies',
+                                  description: 'These cookies allow the website to remember the choices you have made in the past',
+                                  toggle: {
+                                      value: 'analytics',     // your cookie category
+                                      enabled: false,
+                                      readonly: false
+                                  },
+                                  cookie_table: [             // list of all expected cookies
+                                      {
+                                          col1: '^_ga',       // match all cookies starting with "_ga"
+                                          col2: 'google.com',
+                                          col3: '2 years',
+                                          col4: 'description ...',
+                                          is_regex: true
+                                      },
+                                      {
+                                          col1: '_gid',
+                                          col2: 'google.com',
+                                          col3: '1 day',
+                                          col4: 'description ...',
+                                      }
+                                  ]
+                              }, {
+                                  title: 'Advertisement and Targeting cookies',
+                                  description: 'These cookies collect information about how you use the website, which pages you visited and which links you clicked on. All of the data is anonymized and cannot be used to identify you',
+                                  toggle: {
+                                      value: 'targeting',
+                                      enabled: false,
+                                      readonly: false
+                                  }
+                              }, {
+                                  title: 'More information',
+                                  description: 'For any queries in relation to our policy on cookies and your choices, please <a class="cc-link" href="#yourcontactpage">contact us</a>.',
+                              }
+                          ]
+                      }
+                  }
+              }
+          });
+      });
+  </script>
+
+    <!-- privacy consent -->
+    <!--- Top Menu -->
+    <div class="hbox topfix topmenubg  grey">
+      <div class="hbox wp90only">
+        <div class="hbox tgap10">
+          <!-- Logo -->
+          <a href="#home"><img src="./svg/new-images/logo/vyakto-logo-only.png" height="65" width="164" /></a>
+        </div>
+
+        <div class="hbox rightonly">
+          <!-- Nav Menu Desktop-->
+          <nav>
+            <ul class="hbox hgap15 tgap20">
+              <li class="desktop-nav">
+                <a class="txtlink">Products</a>
+                <ul class="desktop-nav-content">
+                  <li><a class="txtlink" href="#atreimodevsecops">@Reimo DevSecOps</a></li>
+                  <li><a class="txtlink" href="#atreimodesktop">@Reimo Desktop</a></li>
+                  <li><a class="txtlink" href="#atreimocollab">@Reimo Collaboration</a></li>
+                </ul>
+              </li>
+              <li class="desktop-nav">
+                <a class="txtlink">Company</a>
+                <ul class="desktop-nav-content">
+                    <li><a class="txtlink" href="#about">About</a></li>
+                    <li><a class="txtlink" href="#about">Customers</a></li>
+                </ul>
+              </li>
+              <li class="desktop-nav">
+                <a class="txtlink" href="#becomepartner">Partner</a>
+              </li>
+              <li class="desktop-nav">
+                <a class="txtlink" href="#contactus">Contact</a>
+              </li>
+              <li class="mobile-nav">
+                <a href="#"
+                  ><img
+                    class="vreemo-icon-w25"
+                    src="./svg/new-images/icons/burger-menu-icon.svg"
+                /></a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="mobile-nav-menu">
+            <ul class="vbox vgap10">
+              <li>
+                <div class="hbox rightonly">
+                  <a class="mobile-nav-close" href="#">
+                    <img class="vreemo-icon-w25" src="./svg/x-menu-icon.svg" />
+                  </a>
+                </div>
+              </li>
+              <li>
+                <a class="mobile-dropdown txtlink" >Products</a>
+                <ul class="mobile-dropdown-content vbox vgap10">
+                  <li><a class="txtlink" href="#atreimodevsecops">@Reimo DevSecOps</a></li>
+                  <li><a class="txtlink" href="#atreimodesktop">@Reimo Desktop</a></li>
+                  <li><a class="txtlink" href="#atreimocollab">@Reimo Collaboration</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a class="mobile-dropdown txtlink">Company</a>
+                <ul class="mobile-dropdown-content vbox vgap10">
+                    <li><a class="txtlink" href="#about">About</a></li>
+                    <li><a class="txtlink" href="#about">Customers</a></li>
+                </ul>
+              </li>
+              
+              <li>
+                <a class="mobile-dropdown txtlink" href="#becomepartner">Partner</a>
+              </li>
+              <li>
+                <a class="mobile-dropdown txtlink" href="#contactus">Contact</a>
+              </li>          
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Nav Menu 
+        <div class="hbox wp50">
+          <nav class="mobile-nav-menu">
+            <ul class="vbox vgap10">
+              
+              <li>
+                <div class="hbox right">
+                  <img class="vreemo-icon-w25" src="./svg/x-menu-icon.svg" />
+                </div>
+              </li>
+              <li><a class="txtlink" href="#">Platform</a></li>
+              <li><a class="txtlink" href="#">Pricing</a></li>
+              <li><a class="txtlink" href="#">Resources</a></li>
+              <li><a class="txtlink" href="#">Company</a></li>
+              <li><a class="txtlink" href="#">Contact</a></li>
+              <li><a class="txtlink" href="#">Login</a></li>
+            </ul>
+          </nav>
+        </div> -->
+      </div>
+
+      <!--logo and navbar topmenu -->
+    </div>
+
+    <div class="vbox wp100" >
+      <!--- Main Page Starts -->
+      <!--- Hero Section -->
+      <div class="hbox hcenter" id="home">
+        <div class="hbox wp100">
+          <img
+            class="vreemo-orange-purple-bg-hero"
+            src="./svg/new-images/icons/mainpg-blue-purple-new-bg.svg"
+          />
+        </div>
+        <div class="hbox overlap-450 wp90 hgap15">
+          <!-- page margin-->
+          <div class="vbox wp100">
+            <div class="hbox">
+              <div class="hbox wp40">
+                <div class="vbox vcenter vgap15">
+                  <div class="hbox hcenter">
+                    <!--<img class="vremoimg" src="vreemo-title-trans.PNG" />
+                    -->
+                    <img
+                      class="vreemo-banner"
+                      src="./svg/new-images/platform-dia/secure-work-platform-banner.png"
+                    />
+                  </div>
+                  <div class="hbox hcenter">
+                    <!--<img class="vremoimg" src="vreemo-title-trans.PNG" />
+                    -->
+                    <img
+                      src="./svg/new-images/logo/atreemo-logo.png"
+                      height="70"
+                      width="250"
+                    />
+                  </div>
+                  <div class="hbox hcenter">
+                    <p class="medium-narrow">Secured Remote Work Platform</p>
+                  </div>
+                </div>
+              </div>
+              <div class="hbox wp50 right">
+                <div class="vbox">
+                  <div class="hbox">
+                    <img
+                      class="vreemo-dia"
+                      src="./svg/new-images/platform-dia/atreemo-platform-dia-blue-white1.png"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hbox hcenter vReemo-blue-new-banner">
+        <div class="hbox hcenter wp90 hgap15 tgap20">
+          <div class="header1 txt-col-white">Key Benefits</div>
+        </div>
+
+        <!-- Key benefits -->
+        <div class="hbox hcenter wp100 hgap15 vReemo-blue-new-banner vgap10">
+          <!-- page margin-->
+
+          <div class="hbox wp25">
+            <div class="vbox">
+              <div class="hbox hcenter">
+                <img
+                  src="./svg/feature-icons/white/reduce-cost-white.svg"
+                  class="keybenefitsimg85"
+                />
+              </div>
+              <div class="hbox hcenter">
+                <span class="header4 txt-col-white">Reduce cost up to 50%</span
+                >
+              </div>
+
+              <div class="hbox hcenter">
+                <img
+                  src="./svg/feature-icons/white/pre-tested-white.svg"
+                  class="keybenefitsimg85"
+                />
+              </div>
+              <div class="hbox hcenter">
+                <span class="header4 txt-col-white"
+                  >Pre Engineered and Pre Tested
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hbox wp25 bgap20">
+            <div class="vbox">
+              <div class="hbox hcenter">
+                <img
+                  src="./svg/feature-icons/white/team-productivity-white.svg"
+                  class="keybenefitsimg85"
+                />
+              </div>
+              <div class="hbox hcenter">
+                <span class="header4 txt-col-white"
+                  >Increase team productivity up to 50%</span
+                >
+              </div>
+
+              <div class="hbox hcenter">
+                <img
+                  src="./svg/feature-icons/white/team-effort-white.svg"
+                  class="keybenefitsimg85"
+                />
+              </div>
+              <div class="hbox hcenter">
+                <span class="header4 txt-col-white"
+                  >Decrease IT team effort up to 55%
+                </span>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="hbox wp25">
+            <div class="vbox">
+              <div class="hbox hcenter">
+                <img
+                  src="./svg/feature-icons/white/secure-dedicated-white.svg"
+                  class="keybenefitsimg85"
+                />
+              </div>
+              <div class="hbox hcenter">
+                <span class="header4 txt-col-white">Secure and Dedicated </span>
+              </div>
+
+              <div class="hbox hcenter">
+                <img
+                  src="./svg/feature-icons/white/data-leak-icon-white.svg"
+                  class="keybenefitsimg85"
+                />
+              </div>
+              <div class="hbox hcenter">
+                <span class="header4 txt-col-white">Prevents data leaks </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- Feature Products -->
+      
+      <div class="hbox hcenter wp100 hgap15">
+        <div class="vbox wp100 vgap15">
+          <div class="hbox hcenter">
+            <div class="header1">Our Remote Workspace Products</div>
+          </div>
+          <div class="hbox wp100 hcenter hgap15">
+            <div class="hbox wp25 vremodevopscard">
+              <!-- Column 1-->
+              <div class="vbox vgap15">
+                <div class="hbox hcenter tgap20">
+                  <img src="./svg/new-images/logo/atReemodesktop-logo.svg" height="65" />
+                </div>
+                <div class="hbox hcenter">
+                  <img
+                    class="atReimoDiaImg"
+                    src="./svg/new-images/platform-dia/vDesktop-digram.png"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="hbox wp25 vremodevopscard">
+              <!-- Column 2-->
+
+              <div class="vbox vgap15">
+                <div class="hbox hcenter tgap20">
+                  <img src="./svg/new-images/logo/atReemodevsecops-logo.svg" height="65"/>
+                </div>
+                <div class="hbox hcenter">
+                  <img
+                    class="atReimoDiaImg"
+                    src="./svg/new-images/platform-dia/vDevsecops-digram.png"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="hbox wp25 vremodevopscard">
+              <!-- Column 3-->
+
+              <div class="vbox vgap15">
+                <div class="hbox hcenter tgap20">
+                  <img src="./svg/new-images/logo/atReemocollaborator-logo.svg" height="65" />
+                </div>
+                <div class="hbox hcenter">
+                  <img
+                    class="atReimoDiaImg"
+                    src="./svg/new-images/platform-dia/vCollab-digram.png"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--- Request Demo Buttons -->
+      <div class="hbox hcenter vcenter">
+        <div class="hbox hcenter wp90 hgap15 bgap20">
+          <!--<a class="link-button" href="#">Visit @Reimo</a>-->
+          <a class="link-button" href="./vyakto-requestdemo.html">Request Demo</a>
+        
+        </div>
+      </div>
+
+      <!--- Industry News Section -->
+      <div class="hbox hcenter dark-black vcenter" id="atreimodesktop">
+        <div class="hbox hcenter wp90 hgap20 tgap20 bgap20">
+          <div class="news-banner-txt"> Learn how @Reimo helps Remote Development</div>
+          <div><a class="link-button">Coming Soon</a></div>
+        </div>
+      </div>
+
+      <!-- atReemo Desktop -->
+      <div class="hbox hcenter wp100 hgap15 vgap10 tgap20" >
+        <div class="hbox wp40 vcenter">
+          <div class="vbox vgap15">
+            <div class="hbox hcenter tgap20">
+              <img src="./svg/new-images/logo/atReemodesktop-logo.svg" />
+            </div>
+            <div class="hbox hcenter">
+              <img
+                class="atReimoDiaImg"
+                src="./svg/new-images/platform-dia/vDesktop-digram.png"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="hbox wp50">
+          <div class="vbox vgap10">
+            <div class="hbox left">
+              <!-- Row 1-->
+              <div class="header1">@Reimo Desktop</div>
+            </div>
+            <div class="hbox left">
+              <div class="header3">Significant Cost Saving</div>
+            </div>
+            <div class="hbox">
+              <div class="reemosmalltext">
+                @Reimo Desktop runs in a container, that requires less compute
+                resources It works in streaming content mode, so that the
+                network usage is very low as compared to standard remote access
+                protocols This helps to save costs up to 50% as compared to
+                virtual machine based apps or desktops, and up to 70% as
+                compared to physical desktops.
+              </div>
+            </div>
+            <div class="hbox left">
+              <div class="header3">Isolation and Data Protection</div>
+            </div>
+            <div class="hbox">
+              <div class="reemosmalltext">
+                @Reimo Desktop comes with options to protect data against
+                download, copy-paste, browsing content filtering and Isolation
+                technology to prevent against malware and ransomware. It is easy
+                to dispose and spin up new upgrades by simply deploying a new
+                containerized version and save up to 75% time and effort
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hbox hcenter wp100 hgap15 dark-purple">
+        <div class="vbox wp100 vgap15">
+          <div class="hbox hcenter">
+            <div class="header2 txt-col-white">Key Features</div>
+          </div>
+          <div class="hbox wp100 hcenter">
+            <div class="hbox wp20">
+              <!-- Column 1-->
+              <div class="vbox">
+                <div class="hbox hcenter">
+                  <img src="./svg/feature-icons/white/no-vpn-white.svg" />
+                </div>
+                <div class="hbox hcenter">
+                  <span class="header4 txt-col-white">No VPN Required </span>
+                </div>
+
+                <div class="hbox hcenter tagp5">
+                  <img
+                    src="./svg/feature-icons/white/devops-compatible-white.svg"
+                  />
+                </div>
+                <div class="hbox hcenter">
+                  <span class="header4 txt-col-white">DevOps Compatible </span>
+                </div>
+              </div>
+            </div>
+            <div class="hbox wp20">
+              <!-- Column 2-->
+
+              <div class="vbox">
+                <div class="hbox hcenter">
+                  <img
+                    src="./svg/feature-icons/white/download-protection-white.svg"
+                  />
+                </div>
+                <div class="hbox hcenter">
+                  <span class="header4 txt-col-white">Download Protection</span>
+                </div>
+
+                <div class="hbox hcenter">
+                  <img
+                    src="./svg/feature-icons/white/data-leak-icon-white.svg"
+                    height="85"
+                  />
+                </div>
+                <div class="hbox hcenter">
+                  <span class="header4 txt-col-white">Data Protection </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hbox wp20">
+              <!-- Column 3-->
+
+              <div class="vbox">
+                <div class="hbox hcenter tagp5">
+                  <img
+                    src="./svg/feature-icons/white/copy-paste-protection-white.svg"
+                  />
+                </div>
+                <div class="hbox hcenter">
+                  <span class="header4 txt-col-white"
+                    >Copy Paste Protection</span
+                  >
+                </div>
+
+                <div class="hbox hcenter tgap10">
+                  <img
+                    src="./svg/feature-icons/white/malware-protection-white.svg"
+                  />
+                </div>
+                <div class="hbox hcenter">
+                  <span class="header4 txt-col-white"
+                    >No Malware & Ransomware
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hbox wp20">
+              <!-- Column 4-->
+
+              <div class="vbox">
+                <div class="hbox hcenter tgap5">
+                  <img
+                    src="./svg/feature-icons/white/content-filter-white.svg"
+                  />
+                </div>
+                <div class="hbox hcenter">
+                  <span class="header4 txt-col-white">URL Filter</span>
+                </div>
+
+                <div class="hbox hcenter tgap10">
+                  <img
+                    src="./svg/feature-icons/white/desktop-sharing-white.svg"
+                  />
+                </div>
+                <div class="hbox hcenter">
+                  <span class="header4 txt-col-white">Desktop Sharing </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--- Request atReemo Desktop Demo Buttons -->
+      <div class="hbox hcenter vcenter  dark-purple">
+        <div class="hbox hcenter wp90 hgap15 bgap20">
+          <!--<a class="link-button" href="#">Explore @ReimoDesktop</a>-->
+          <a class="link-button" href="./vyakto-requestdemo.html">Request Demo</a>
+        
+        </div>
+      </div>
+
+      <!--- Industry News Section -->
+      <div class="hbox hcenter dark-black vcenter " id="atreimodevsecops">
+        <div class="hbox hcenter wp90 hgap20 tgap20 bgap20">
+          <div class="news-banner-txt"> Cost saving compare to VDI and Physical Desktop</div>
+          <div><a class="link-button">Coming Soon</a></div>
+        </div>
+      </div>
+
+      <!-- atReimo DevSecOps -->
+      <div class="hbox hcenter wp100 hgap15 vgap10 tgap20">
+        <div class="hbox wp40 vcenter">
+          <div class="vbox vgap15">
+            <div class="hbox hcenter tgap20">
+              <img src="./svg/new-images/logo/atReemodevsecops-logo.svg" />
+            </div>
+            <div class="hbox hcenter">
+              <img
+                class="atReimoDiaImg"
+                src="./svg/new-images/platform-dia/vDevsecops-digram.png"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="hbox wp50">
+          <div class="vbox vgap10">
+            <div class="hbox left">
+              <!-- Row 1-->
+              <div class="header1">@Reimo DevSecOps</div>
+            </div>
+            <div class="hbox left">
+              <div class="header3">Secured and Cloud Agnostic</div>
+            </div>
+            <div class="hbox">
+              <div class="reemosmalltext">
+                @Reimo DevSecOps Platform provides ready to use well integrated DevSecOps environment with tools and workflows which empowers to perform Continuous Integration (CI), Continuous Test (CT), Continuous Delivery (CD) and Security scanning Operations (SecOps) to identify Vulnerability and Security flaws during various stages of development.Platform contains best of breed open source tools which are pre-integrated, pre-tested and prevents data leaks with enterprise
+                grade features can be deploy at On-premise,AWS Cloud, Azure Cloud, Google Cloud, Linode Cloud.
+              </div>
+            </div>
+            <div class="hbox left">
+              <div class="header3">Save time and Budget</div>
+            </div>
+            <div class="hbox">
+              <div class="reemosmalltext">
+                @Reimo DevSecOps Platform is fully customizable and dedicated platform which is suitable for Virtualized remote working for
+                your organisation and enables you to focus on innovation, automation and helps you to deliver on time with best practises and
+                within a budget.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- atReimo DevSecOps Key features -->
+      <div class="hbox hcenter wp100 hgap15 orangebg1">
+        <div class="vbox wp100 vgap15">
+          <div class="hbox hcenter">
+            <div class="header2">Key Features</div>
+          </div>
+          <div class="hbox wp100 hcenter">
+             <!-- Column 1-->
+            <div class="hbox wp25">
+             
+              <div class="vbox">
+                <div class="hbox left">
+                    <span class="header2">DevOps
+  
+                  </span>
+                </div>
+                
+                <div class="hbox left">
+                  <span class="header5">Source Code Management (CD)
+                </span>
+                </div>
+                <div class="hbox left">
+                  <span class="header5">Continuous Integration (CI)
+                 </span>
+                </div>
+                <div class="hbox left">
+                    <span class="header5">Testing & Deploy
+                        (CT)
+                   </span>
+                </div>
+                <div class="hbox left">
+                    <span class="header5">Artifacts Management
+                    </span>
+                </div>
+                <div class="hbox left">
+                    <span class="header5">Issue/Task Management
+                    </span>
+                </div>
+                <div class="hbox left">
+                    <span class="header5">Monitoring & Logging
+                    </span>
+                </div>
+              </div>
+            </div>
+            <!-- Column 2-->
+            <div class="hbox wp25">
+              
+
+              <div class="vbox">
+                <div class="hbox left">
+                    <span class="header2">DevSecOps
+  
+                  </span>
+                </div>
+                
+                <div class="hbox left">
+                  <span class="header5">Static Code Analysis (SAST)
+
+                </span>
+                </div>
+                <div class="hbox left">
+                  <span class="header5">Dynamic Code Analysis (DAST)
+                 </span>
+                </div>
+                <div class="hbox left">
+                    <span class="header5">Vulnerability Scanning
+                   </span>
+                </div>
+                <div class="hbox left">
+                    <span class="header5">Code Compliance
+                    </span>
+                </div>
+                <div class="hbox left">
+                    <span class="header5">Third party License Scanning
+                    </span>
+                </div>
+                <div class="hbox left">
+                    <span class="header5">Penetration Testing
+                    </span>
+                </div>
+              </div>
+            </div>
+            <!-- Column 3-->
+            <div class="hbox wp25">
+              
+
+                <div class="vbox">
+                    <div class="hbox left">
+                        <span class="header2">Professional Service
+      
+                      </span>
+                    </div>
+                  
+                  
+                  <div class="hbox left">
+                    <span class="header5">Agile practice training
+  
+                  </span>
+                  </div>
+                  <div class="hbox left">
+                    <span class="header5">Application Modernizing
+                   </span>
+                  </div>
+                  <div class="hbox left">
+                      <span class="header5 ">Containerization
+                     </span>
+                  </div>
+                  <div class="hbox left">
+                      <span class="header5">Microservice templates
+                      </span>
+                  </div>
+                  <div class="hbox left">
+                      <span class="header5">Expert Consulting
+                      </span>
+                  </div>
+                  <div class="hbox left">
+                      <span class="header5">Group Training
+                      </span>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!--- Request atReemo DevSecOps Demo Buttons -->
+      <div class="hbox hcenter vcenter orangebg1">
+        <div class="hbox hcenter wp90 hgap15 bgap20">
+          <!--<a class="link-button" href="#">Explore @ReimoDevSecOps</a>-->
+          <a class="link-button" href="./vyakto-requestdemo.html">Request Demo</a>
+        
+        </div>
+      </div>
+
+      <!--- Industry News Section -->
+      <div class="hbox hcenter dark-black vcenter" id="atreimocollab"   >
+        <div class="hbox hcenter wp90 hgap20 tgap20 bgap20">
+          <div class="news-banner-txt"> Cost saving compare to other DevSecOps plaforms</div>
+          <div><a class="link-button">Coming Soon</a></div>
+        </div>
+      </div>
+
+
+      <!-- atReimo Collaboration -->
+      <div class="hbox hcenter wp100 hgap15 vgap10 tgap20" >
+        <div class="hbox wp40 vcenter">
+          <div class="vbox vgap15">
+            <div class="hbox hcenter tgap20">
+              <img src="./svg/new-images/logo/atReemocollaborator-logo.svg" />
+            </div>
+            <div class="hbox hcenter">
+              <img
+                class="atReimoDiaImg"
+                src="./svg/new-images/platform-dia/vCollab-digram.png"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="hbox wp50">
+          <div class="vbox vgap10">
+            <div class="hbox left">
+              <!-- Row 1-->
+              <div class="header1">@Reimo Collaboration</div>
+            </div>
+            <div class="hbox">
+                <div class="reemosmalltext">
+                  @Reimo vReemo Collaboration platform provides effective collaboration, communication and eliminates the need to use different cloud SaaS tools It also reduces license compliance, security, cost and productivity issues that come with it. 
+                </div>
+              </div>
+            <div class="hbox left">
+              <div class="header3">Integrated Collaboration tools</div>
+            </div>
+            <div class="hbox">
+              <div class="reemosmalltext">
+                Platform comes with easy to install and operate various Collaboration tools, such as, Chat, Discussion Thread, Content Sharing, Content Sync, White board, Calendar , Events, Email, Contacts and more
+              </div>
+            </div>
+            <div class="hbox">
+                <div class="header3">Effective Data, Access and User Management</div>
+              </div>
+              <div class="hbox">
+                <div class="reemosmalltext">
+                    Centralized data management, allows to manage files and organizational data efficiently, with complete control.
+                    Provides powerful user and group based file access control, multi layer encryption
+                </div>
+              </div>
+            <div class="hbox">
+              <div class="header3">Reduce Data leaks and Security Risk</div>
+            </div>
+            <div class="hbox">
+              <div class="reemosmalltext">
+                Provides the benefits of online collaboration without the compliance and security risks
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      
+
+      <!--- Request atReemo Collaboration Demo Buttons -->
+      <div class="hbox hcenter vcenter">
+        <div class="hbox hcenter wp90 hgap15 bgap20">
+          <!--<a class="link-button" href="#">Explore @ReimoCollaboration</a>-->
+          <a class="link-button" href="./vyakto-requestdemo.html">Request Demo</a>
+        </div>
+      </div>
+
+      <!--- Industry News Section -->
+      <div class="hbox hcenter dark-black vcenter" id="about">
+        <div class="hbox hcenter wp90 hgap20 tgap20 bgap20">
+          <div class="news-banner-txt"> Learn Secured Collaboration</div>
+          <div><a class="link-button">Coming Soon</a></div>
+        </div>
+      </div>
+
+
+
+      <!--- About Section -->
+      <div class="hbox hcenter vReemo-blue-new-banner" >
+        
+        <div class="hbox wp90 hgap15">
+          <!-- page margin-->
+          <div class="vbox wp100">
+            <div class="hbox">
+              <div class="hbox wp40">
+                <div class="vbox vcenter vgap15">
+                  <div class="hbox hcenter">
+                    <!--<img class="vremoimg" src="vreemo-title-trans.PNG" />
+                    -->
+                    <img class="vimg" src="./svg/new-images/platform-dia/our-mission-text.png" />
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="hbox wp50 hcenter vcenter">
+                <img
+                class="vreemo-banner"
+                src="./svg/new-images/platform-dia/office-work.svg"
+              />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      
+      <!-- Who we are -->
+      
+      <div class="hbox hcenter wp100 hgap15 vgap10 tgap20">
+        <div class="hbox wp40 vcenter">
+          <div class="vbox vgap15">
+            <div class="hbox hcenter">
+              <img
+                class="atReimoDiaImg"
+                src="./svg/new-images/platform-dia/who-we-are-dia.png"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="hbox wp50">
+          <div class="vbox vgap10">
+            <div class="hbox left">
+                <!-- Row 1-->
+                <div class="header1">Who we are</div>
+              </div>
+            <div class="hbox">
+              <div class="reemosmalltext">
+                From its founding in 2021, Vyakto Technologies has maintained a constant awareness of new technologies to foster foresight and implement business model modifications to keep up with clients' quickly shifting needs. Our organization is led and guided by an exceptionally skilled leadership team.
+              </div>
+            </div>
+            
+            <div class="hbox">
+              <div class="reemosmalltext">
+                Our engineering team is passionate about developing innovative products with the highest quality standards utilizing the appropriate tools and technology. To make the transition from the present enterprise technology stack to the new generation as simple as possible, we build workflow and methodologies that have been evaluated and tested beforehand. Our expertise area include DevSecOps, PaaS Platform, Microservice and Remote development Platform for Remote Working. We deliver technology-driven and customer-focused transformation.
+              </div>
+              <div id="becomepartner">&nbsp;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Our Partners -->
+      <div class="hbox hcenter wp100 hgap15 vgap10 tgap20 dark-purple" >
+        <div class="hbox hcenter wp90 hgap15 tgap20">
+            <div class="header1 txt-col-white">Our Partners</div>
+        </div>
+        <div class="hbox wp40 hcenter">
+          <div class="vbox vgap10 ">
+            <div class="hbox hcenter">
+                <div class="reemosmalltext txt-col-white">
+                    @Reimo partners are important part of our journey. Our partner program provides exciting benefits and growth options to our partners. 
+                  </div>
+            </div>
+            
+            <div class="hbox left">
+              <a class="link-button" href="./vyakto-partner.html">Become Partner</a>
+            </div>
+          </div>
+        </div>
+        <div class="hbox wp50 vcenter">
+          <div class="vbox vgap15">
+            <div class="hbox hcenter">
+              <img
+                class="atReimoDiaImg"
+                src="./svg/new-images/platform-dia/our-partners.svg" width="200"
+              />
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+
+      
+
+      <!-- Our Global Presence -->
+      <div class="hbox hcenter wp100 hgap15 vgap10 tgap20 ">
+        <div class="hbox hcenter wp90 hgap15 tgap20">
+            <div class="header1">Our Global Presence</div>
+        </div>
+        
+        <div class="hbox wp50">
+          <div class="vbox vgap15">
+            <div class="hbox hcenter">
+              <img
+                class="atReimoDiaImg"
+                src="./svg/new-images/platform-dia/our-location.png" width="200"
+              />
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+
+       <!-- Contact Us -->
+      <div class="hbox hcenter wp100 hgap15 tgap20 orangebg1 " id="contactus" >
+        <div class="hbox hcenter wp90 tgap20">
+            <div class="header1">Contact Us</div>
+        </div>
+        <div class="hbox wp25 vcenter">
+            <div class="vbox vgap15">
+              <div class="hbox hcenter">
+                <img
+                  class="contactusImg"
+                  src="./svg/new-images/platform-dia/contactus.svg"
+                />
+              </div>
+              
+            </div>
+          </div>
+        <div class="hbox wp40">
+          <div class="vbox vgap10 ">
+            <div class="hbox left">
+              <div class="header4">
+                We would like to hear from you.
+              </div>
+            </div>
+            <div class="hbox">
+              <div class="hbox header4 left">
+                Registered Office
+              </div>
+              <div class="reemosmalltext">
+                C-1, Sarvodaya Bhuvan, Gokhale Road North,
+                Dadar west, Mumbai : 400028.
+              </div>
+            </div>
+            <div class="hbox left">
+                <div class="hbox wp100 header4">
+                  Sales Office
+                  <br>
+                </div>
+                <div class="reemosmalltext">
+                  Irvine, California 92614.
+                </div>
+              </div>
+            <div class="hbox left bgap10">
+              <a class="link-button" href="./vyakto-contactus.html" >Send your queries</a>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+      
+      
+
+      <!--- Contact Us Section -->
+      <div class="hbox hcenter wp100  greybottombg">
+       
+
+        <div class="hbox wp90 hgap15 left">
+          <!-- page margin-->
+          <div class="vbox vgap5">
+            <div class="hbox wp90 hgap15 vgap5">&nbsp;</div>
+            <div class="hbox wp100">
+              <div class="hbox wp90 text08rem">
+                © 2023 Vyakto Technologies Pvt Ltd. All Rights Reserved.
+              </div>
+              <div class="hbox bgap20">
+                <div>
+                  <a class="text08rem" href="./vyakto-terms-conditions.html">Terms&nbsp;of&nbsp;Use&nbsp;|</a>
+              </div>
+              <div>
+                  <a class="text08rem" href="./vyakto-privacy-policy.html">&nbsp;Privacy&nbsp;|</a>|
+              </div>
+              <div>
+                  <a class="text08rem" href="./vyakto-privacy-policy.html">&nbsp;Cookies&nbsp;Policy</a>
+              </div>    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- page vbox-->
+    <script>
+      function openNav(event) {
+        event.preventDefault();
+        this.openSideMenu();
+      }
+
+      function closeNav(event) {
+        event.preventDefault();
+        this.closeSideMenu();
+      }
+
+      function openSideMenu() {
+        var sidemenuEl = document.querySelector(".mobile-nav-menu");
+        sidemenuEl.style.display = "block";
+      }
+
+      function closeSideMenu() {
+        var sidemenuEl = document.querySelector(".mobile-nav-menu");
+        sidemenuEl.style.display = "none";
+      }
+
+      function resizeWin(event) {
+        event.preventDefault();
+        var docWidth = document.body.clientWidth;
+        if (Number(docWidth) > 900) {
+          this.closeSideMenu();
+        }
+      }
+
+      function init() {
+        var sidemenuOpenEl = document.querySelector(".mobile-nav");
+        sidemenuOpenEl.addEventListener("click", (e) => {
+          this.openNav(e);
+        });
+        var sidemenuOpenEl = document.querySelector(".mobile-nav-close");
+        sidemenuOpenEl.addEventListener("click", (e) => {
+          this.closeNav(e);
+        });
+        window.addEventListener("resize", (e) => {
+          this.resizeWin(e);
+        });
+
+        var dropdown = document.getElementsByClassName("mobile-dropdown");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+      init();
+    </script>
+  </body>
+</html>
