@@ -15,18 +15,27 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- Site Properities -->
-    <title>atReimo Remote working platform</title>
+    <title>Appcodesk Remote working platform</title>
     <link rel="stylesheet" href="./svg/new-images/privacy-censent/cookieconsent.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" type="text/css" href="./css/vyakto-final-style.css" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-22JM61D8PK"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <style >
+      .skyblue-bg{
+    background-color: #0DB2F9; 
+    }
 
-      gtag('config', 'G-22JM61D8PK');
-    </script>
+    .dark-blue-bg {
+    background-color: #17174c;
+  }
 
+.vidcls {
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: clamp(8px, 0.833333vw, 16px);
+    border-bottom-right-radius: clamp(8px, 0.833333vw, 16px);
+    border-top: none;
+}
+    </style>
   </head>
 
   <body class="bodybg bodymar">
@@ -116,7 +125,7 @@
                                   description: 'These cookies allow the website to remember the choices you have made in the past',
                                   toggle: {
                                       value: 'analytics',     // your cookie category
-                                      enabled: true,
+                                      enabled: false,
                                       readonly: false
                                   },
                                   cookie_table: [             // list of all expected cookies
@@ -170,9 +179,7 @@
               <li class="desktop-nav">
                 <a class="txtlink">Products</a>
                 <ul class="desktop-nav-content">
-                  <li><a class="txtlink" href="#atreimodevsecops">@Reimo DevSecOps</a></li>
-                  <li><a class="txtlink" href="#atreimodesktop">@Reimo Desktop</a></li>
-                  <li><a class="txtlink" href="#atreimocollab">@Reimo Collaboration</a></li>
+                  <li><a class="txtlink" href="#appcodeskdesktop">Appcodesk Desktop</a></li>
                 </ul>
               </li>
               <li class="desktop-nav">
@@ -209,9 +216,7 @@
               <li>
                 <a class="mobile-dropdown txtlink" >Products</a>
                 <ul class="mobile-dropdown-content vbox vgap10">
-                  <li><a class="txtlink" href="#atreimodevsecops">@Reimo DevSecOps</a></li>
-                  <li><a class="txtlink" href="#atreimodesktop">@Reimo Desktop</a></li>
-                  <li><a class="txtlink" href="#atreimocollab">@Reimo Collaboration</a></li>
+                  <li><a class="txtlink" href="#appcodeskdesktop">Appcodesk Desktop</a></li>
                 </ul>
               </li>
 
@@ -260,63 +265,59 @@
     <div class="vbox wp100" >
       <!--- Main Page Starts -->
       <!--- Hero Section -->
-      <div class="hbox hcenter" id="home">
-        <div class="hbox wp100">
-          <img
-            class="vreemo-orange-purple-bg-hero"
-            src="./svg/new-images/icons/mainpg-blue-purple-new-bg.svg"
-          />
-        </div>
-        <div class="hbox overlap-450 wp90 hgap15">
+      <div class="hbox hcenter skyblue-bg" id="appcodeskdesktop">
+        
+        <div class="hbox wp90 hgap15">
           <!-- page margin-->
           <div class="vbox wp100">
-            <div class="hbox">
-              <div class="hbox wp40">
-                <div class="vbox vcenter vgap15">
-                  <div class="hbox hcenter">
-                    <!--<img class="vremoimg" src="vreemo-title-trans.PNG" />
-                    -->
-                    <img
-                      class="vreemo-banner"
-                      src="./svg/new-images/platform-dia/secure-work-platform-banner.png"
-                    />
-                  </div>
-                  <div class="hbox hcenter">
-                    <!--<img class="vremoimg" src="vreemo-title-trans.PNG" />
-                    -->
-                    <img
-                      src="./svg/new-images/logo/atreemo-logo.png"
-                      height="70"
-                      width="250"
-                    />
-                  </div>
-                  <div class="hbox hcenter">
-                    <p class="medium-narrow">Secured Remote Work Platform</p>
-                  </div>
-                </div>
-              </div>
-              <div class="hbox wp50 right">
+            <div class="hbox tgap20 bgap20">
+
+              <div class="hbox wp50  tgap20 bgap20">
                 <div class="vbox">
                   <div class="hbox">
-                    <img
-                      class="vreemo-dia"
-                      src="./svg/new-images/platform-dia/atreemo-platform-dia-blue-white1.png"
-                    />
+                    <video autoplay="" loop="" muted="" playsinline="" class="vidcls">
+                      <source type="video/webm" src="./images/section-texts/Appcodeskvidfinal-Pcframe-web.webm">
+                      <source type="video/mp4" src="./images/section-texts/Appcodeskvidfinal-Pcframe-web-big.mp4">
+                    </video>
                   </div>
+                  
                 </div>
               </div>
+              
+              <div class="hbox wp40 right tgap20 bgap20">
+                <div class="vbox vcenter vgap15">
+                  <div class="hbox hcenter tgap20">
+                    <!--<img class="vremoimg" src="vreemo-title-trans.PNG" />
+                    -->
+                    <img
+                      class="vreemo-dia"
+                      src="./images/section-texts/simplesecure.svg"
+                    />
+                  </div>
+                  
+                  <div class="hbox hcenter">
+                    <p class="header5 txt-col-white">Appcodesk Desktop  with advanced endpoint security is your key to a worry-free, productive work environment
+                    </p>
+                  </div>
+                  
+                </div>
+              </div>
+              
             </div>
           </div>
         </div>
       </div>
 
-      <div class="hbox hcenter vReemo-blue-new-banner">
+
+      <!-- Key Benefits-->
+
+      <div class="hbox hcenter dark-blue-bg">
         <div class="hbox hcenter wp90 hgap15 tgap20">
           <div class="header1 txt-col-white">Key Benefits</div>
         </div>
 
         <!-- Key benefits -->
-        <div class="hbox hcenter wp100 hgap15 vReemo-blue-new-banner vgap10">
+        <div class="hbox hcenter wp100 hgap15  vgap10">
           <!-- page margin-->
 
           <div class="hbox wp25">
@@ -402,131 +403,54 @@
       </div>
 
       
-      <!-- Feature Products -->
-      
-      <div class="hbox hcenter wp100 hgap15">
-        <div class="vbox wp100 vgap15">
-          <div class="hbox hcenter">
-            <div class="header1">Our Remote Workspace Products</div>
-          </div>
-          <div class="hbox wp100 hcenter hgap15">
-            <div class="hbox wp25 vremodevopscard">
-              <!-- Column 1-->
-              <div class="vbox vgap15">
-                <div class="hbox hcenter tgap20">
-                  <img src="./svg/new-images/logo/atReemodesktop-logo.svg" height="65" />
-                </div>
-                <div class="hbox hcenter">
-                  <img
-                    class="atReimoDiaImg"
-                    src="./svg/new-images/platform-dia/vDesktop-digram.png"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="hbox wp25 vremodevopscard">
-              <!-- Column 2-->
-
-              <div class="vbox vgap15">
-                <div class="hbox hcenter tgap20">
-                  <img src="./svg/new-images/logo/atReemodevsecops-logo.svg" height="65"/>
-                </div>
-                <div class="hbox hcenter">
-                  <img
-                    class="atReimoDiaImg"
-                    src="./svg/new-images/platform-dia/vDevsecops-digram.png"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="hbox wp25 vremodevopscard">
-              <!-- Column 3-->
-
-              <div class="vbox vgap15">
-                <div class="hbox hcenter tgap20">
-                  <img src="./svg/new-images/logo/atReemocollaborator-logo.svg" height="65" />
-                </div>
-                <div class="hbox hcenter">
-                  <img
-                    class="atReimoDiaImg"
-                    src="./svg/new-images/platform-dia/vCollab-digram.png"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--- Request Demo Buttons -->
-      <div class="hbox hcenter vcenter">
-        <div class="hbox hcenter wp90 hgap15 bgap20">
-          <!--<a class="link-button" href="#">Visit @Reimo</a>-->
-          <a class="link-button" href="./vyakto-requestdemo.html">Request Demo</a>
+      <!-- Human Section -->
+      <div class="hbox hcenter skyblue-bg">
         
-        </div>
-      </div>
-
-      <!--- Industry News Section -->
-      <div class="hbox hcenter dark-black vcenter" id="atreimodesktop">
-        <div class="hbox hcenter wp90 hgap20 tgap20 bgap20">
-          <div class="news-banner-txt"> Learn how @Reimo helps Remote Development</div>
-          <div><a class="link-button">Coming Soon</a></div>
-        </div>
-      </div>
-
-      <!-- atReemo Desktop -->
-      <div class="hbox hcenter wp100 hgap15 vgap10 tgap20" >
-        <div class="hbox wp40 vcenter">
-          <div class="vbox vgap15">
-            <div class="hbox hcenter tgap20">
-              <img src="./svg/new-images/logo/atReemodesktop-logo.svg" />
-            </div>
-            <div class="hbox hcenter">
-              <img
-                class="atReimoDiaImg"
-                src="./svg/new-images/platform-dia/vDesktop-digram.png"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="hbox wp50">
-          <div class="vbox vgap10">
-            <div class="hbox left">
-              <!-- Row 1-->
-              <div class="header1">@Reimo Desktop</div>
-            </div>
-            <div class="hbox left">
-              <div class="header3">Significant Cost Saving</div>
-            </div>
-            <div class="hbox">
-              <div class="reemosmalltext">
-                @Reimo Desktop runs in a container, that requires less compute
-                resources It works in streaming content mode, so that the
-                network usage is very low as compared to standard remote access
-                protocols This helps to save costs up to 50% as compared to
-                virtual machine based apps or desktops, and up to 70% as
-                compared to physical desktops.
+        <div class="hbox wp90 hgap10">
+          <!-- page margin-->
+          <div class="vbox wp100">
+            <div class="hbox tgap20 bgap20">
+              <div class="hbox wp50">
+                <div class="vbox">
+                  <div class="hbox hcenter">
+                    <img
+                      class="vreemo-dia"
+                      src="./images/section-texts/simple-girl.png"
+                    />
+                  </div>
+                </div>  
+                
               </div>
-            </div>
-            <div class="hbox left">
-              <div class="header3">Isolation and Data Protection</div>
-            </div>
-            <div class="hbox">
-              <div class="reemosmalltext">
-                @Reimo Desktop comes with options to protect data against
-                download, copy-paste, browsing content filtering and Isolation
-                technology to prevent against malware and ransomware. It is easy
-                to dispose and spin up new upgrades by simply deploying a new
-                containerized version and save up to 75% time and effort
+              <div class="hbox wp40 right ">
+                <div class="vbox vcenter vgap15">
+                  <div class="hbox hcenter tgap20">
+                    <!--<img class="vremoimg" src="vreemo-title-trans.PNG" />
+                    -->
+                    <img
+                      class="vreemo-dia"
+                      src="./images/section-texts/secureanywhere.svg"
+                    />
+                  </div>
+                  
+                  <div class="hbox hcenter tgap10">
+                    <p class="header5 txt-col-white">Zero Install Agent, Secure Gateway Connections
+
+                    </p>
+                    
+                    <p class="reemosmalltext txt-col-white">Appcodesk platform offers secure disposable gateway connection to desktops with no agent installation on your pc. Access your Digital workspace resource such as Desktops, Network, Server, Cloud data with secured Appcodesk desktops without VPN tools from anywhere, anytime from any network whether its home network or public wi-fi or mobile phone network.  
+                    </p>
+                  </div>
+                 
+                 
+                </div>
               </div>
+             
             </div>
           </div>
         </div>
       </div>
 
-      <div class="hbox hcenter wp100 hgap15 dark-purple">
+      <div class="hbox hcenter wp100 hgap15 dark-blue-bg">
         <div class="vbox wp100 vgap15">
           <div class="hbox hcenter">
             <div class="header2 txt-col-white">Key Features</div>
@@ -632,288 +556,28 @@
         </div>
       </div>
 
-      <!--- Request atReemo Desktop Demo Buttons -->
-      <div class="hbox hcenter vcenter  dark-purple">
-        <div class="hbox hcenter wp90 hgap15 bgap20">
-          <!--<a class="link-button" href="#">Explore @ReimoDesktop</a>-->
-          <a class="link-button" href="./vyakto-requestdemo.html">Request Demo</a>
-        
-        </div>
-      </div>
-
       <!--- Industry News Section -->
-      <div class="hbox hcenter dark-black vcenter " id="atreimodevsecops">
+      <div class="hbox hcenter dark-black vcenter" id="atreimodesktop">
         <div class="hbox hcenter wp90 hgap20 tgap20 bgap20">
-          <div class="news-banner-txt"> Cost saving compare to VDI and Physical Desktop</div>
-          <div><a class="link-button">Coming Soon</a></div>
+          <div class="news-banner-txt">For &nbsp;  &nbsp; more  &nbsp; &nbsp; information  &nbsp; &nbsp;visit  &nbsp; &nbsp;www.appcodesk.com</div>
+          <div><a class="link-button" href="https://www.appcodesk.com">appcodesk.com</a></div>
         </div>
       </div>
 
-      <!-- atReimo DevSecOps -->
-      <div class="hbox hcenter wp100 hgap15 vgap10 tgap20">
-        <div class="hbox wp40 vcenter">
-          <div class="vbox vgap15">
-            <div class="hbox hcenter tgap20">
-              <img src="./svg/new-images/logo/atReemodevsecops-logo.svg" />
-            </div>
-            <div class="hbox hcenter">
-              <img
-                class="atReimoDiaImg"
-                src="./svg/new-images/platform-dia/vDevsecops-digram.png"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="hbox wp50">
-          <div class="vbox vgap10">
-            <div class="hbox left">
-              <!-- Row 1-->
-              <div class="header1">@Reimo DevSecOps</div>
-            </div>
-            <div class="hbox left">
-              <div class="header3">Secured and Cloud Agnostic</div>
-            </div>
-            <div class="hbox">
-              <div class="reemosmalltext">
-                @Reimo DevSecOps Platform provides ready to use well integrated DevSecOps environment with tools and workflows which empowers to perform Continuous Integration (CI), Continuous Test (CT), Continuous Delivery (CD) and Security scanning Operations (SecOps) to identify Vulnerability and Security flaws during various stages of development.Platform contains best of breed open source tools which are pre-integrated, pre-tested and prevents data leaks with enterprise
-                grade features can be deploy at On-premise,AWS Cloud, Azure Cloud, Google Cloud, Linode Cloud.
-              </div>
-            </div>
-            <div class="hbox left">
-              <div class="header3">Save time and Budget</div>
-            </div>
-            <div class="hbox">
-              <div class="reemosmalltext">
-                @Reimo DevSecOps Platform is fully customizable and dedicated platform which is suitable for Virtualized remote working for
-                your organisation and enables you to focus on innovation, automation and helps you to deliver on time with best practises and
-                within a budget.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+     
 
-      <!-- atReimo DevSecOps Key features -->
-      <div class="hbox hcenter wp100 hgap15 orangebg1">
-        <div class="vbox wp100 vgap15">
-          <div class="hbox hcenter">
-            <div class="header2">Key Features</div>
-          </div>
-          <div class="hbox wp100 hcenter">
-             <!-- Column 1-->
-            <div class="hbox wp25">
-             
-              <div class="vbox">
-                <div class="hbox left">
-                    <span class="header2">DevOps
-  
-                  </span>
-                </div>
-                
-                <div class="hbox left">
-                  <span class="header5">Source Code Management (CD)
-                </span>
-                </div>
-                <div class="hbox left">
-                  <span class="header5">Continuous Integration (CI)
-                 </span>
-                </div>
-                <div class="hbox left">
-                    <span class="header5">Testing & Deploy
-                        (CT)
-                   </span>
-                </div>
-                <div class="hbox left">
-                    <span class="header5">Artifacts Management
-                    </span>
-                </div>
-                <div class="hbox left">
-                    <span class="header5">Issue/Task Management
-                    </span>
-                </div>
-                <div class="hbox left">
-                    <span class="header5">Monitoring & Logging
-                    </span>
-                </div>
-              </div>
-            </div>
-            <!-- Column 2-->
-            <div class="hbox wp25">
-              
-
-              <div class="vbox">
-                <div class="hbox left">
-                    <span class="header2">DevSecOps
-  
-                  </span>
-                </div>
-                
-                <div class="hbox left">
-                  <span class="header5">Static Code Analysis (SAST)
-
-                </span>
-                </div>
-                <div class="hbox left">
-                  <span class="header5">Dynamic Code Analysis (DAST)
-                 </span>
-                </div>
-                <div class="hbox left">
-                    <span class="header5">Vulnerability Scanning
-                   </span>
-                </div>
-                <div class="hbox left">
-                    <span class="header5">Code Compliance
-                    </span>
-                </div>
-                <div class="hbox left">
-                    <span class="header5">Third party License Scanning
-                    </span>
-                </div>
-                <div class="hbox left">
-                    <span class="header5">Penetration Testing
-                    </span>
-                </div>
-              </div>
-            </div>
-            <!-- Column 3-->
-            <div class="hbox wp25">
-              
-
-                <div class="vbox">
-                    <div class="hbox left">
-                        <span class="header2">Professional Service
-      
-                      </span>
-                    </div>
-                  
-                  
-                  <div class="hbox left">
-                    <span class="header5">Agile practice training
-  
-                  </span>
-                  </div>
-                  <div class="hbox left">
-                    <span class="header5">Application Modernizing
-                   </span>
-                  </div>
-                  <div class="hbox left">
-                      <span class="header5 ">Containerization
-                     </span>
-                  </div>
-                  <div class="hbox left">
-                      <span class="header5">Microservice templates
-                      </span>
-                  </div>
-                  <div class="hbox left">
-                      <span class="header5">Expert Consulting
-                      </span>
-                  </div>
-                  <div class="hbox left">
-                      <span class="header5">Group Training
-                      </span>
-                  </div>
-                </div>
-              </div>
-            
-          </div>
-        </div>
-      </div>
-
-      <!--- Request atReemo DevSecOps Demo Buttons -->
-      <div class="hbox hcenter vcenter orangebg1">
-        <div class="hbox hcenter wp90 hgap15 bgap20">
-          <!--<a class="link-button" href="#">Explore @ReimoDevSecOps</a>-->
-          <a class="link-button" href="./vyakto-requestdemo.html">Request Demo</a>
-        
-        </div>
-      </div>
-
-      <!--- Industry News Section -->
-      <div class="hbox hcenter dark-black vcenter" id="atreimocollab"   >
-        <div class="hbox hcenter wp90 hgap20 tgap20 bgap20">
-          <div class="news-banner-txt"> Cost saving compare to other DevSecOps plaforms</div>
-          <div><a class="link-button">Coming Soon</a></div>
-        </div>
-      </div>
-
-
-      <!-- atReimo Collaboration -->
-      <div class="hbox hcenter wp100 hgap15 vgap10 tgap20" >
-        <div class="hbox wp40 vcenter">
-          <div class="vbox vgap15">
-            <div class="hbox hcenter tgap20">
-              <img src="./svg/new-images/logo/atReemocollaborator-logo.svg" />
-            </div>
-            <div class="hbox hcenter">
-              <img
-                class="atReimoDiaImg"
-                src="./svg/new-images/platform-dia/vCollab-digram.png"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="hbox wp50">
-          <div class="vbox vgap10">
-            <div class="hbox left">
-              <!-- Row 1-->
-              <div class="header1">@Reimo Collaboration</div>
-            </div>
-            <div class="hbox">
-                <div class="reemosmalltext">
-                  @Reimo vReemo Collaboration platform provides effective collaboration, communication and eliminates the need to use different cloud SaaS tools It also reduces license compliance, security, cost and productivity issues that come with it. 
-                </div>
-              </div>
-            <div class="hbox left">
-              <div class="header3">Integrated Collaboration tools</div>
-            </div>
-            <div class="hbox">
-              <div class="reemosmalltext">
-                Platform comes with easy to install and operate various Collaboration tools, such as, Chat, Discussion Thread, Content Sharing, Content Sync, White board, Calendar , Events, Email, Contacts and more
-              </div>
-            </div>
-            <div class="hbox">
-                <div class="header3">Effective Data, Access and User Management</div>
-              </div>
-              <div class="hbox">
-                <div class="reemosmalltext">
-                    Centralized data management, allows to manage files and organizational data efficiently, with complete control.
-                    Provides powerful user and group based file access control, multi layer encryption
-                </div>
-              </div>
-            <div class="hbox">
-              <div class="header3">Reduce Data leaks and Security Risk</div>
-            </div>
-            <div class="hbox">
-              <div class="reemosmalltext">
-                Provides the benefits of online collaboration without the compliance and security risks
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
+     
 
       
 
-      <!--- Request atReemo Collaboration Demo Buttons -->
-      <div class="hbox hcenter vcenter">
-        <div class="hbox hcenter wp90 hgap15 bgap20">
-          <!--<a class="link-button" href="#">Explore @ReimoCollaboration</a>-->
-          <a class="link-button" href="./vyakto-requestdemo.html">Request Demo</a>
-        </div>
-      </div>
+      
 
-      <!--- Industry News Section -->
-      <div class="hbox hcenter dark-black vcenter" id="about">
-        <div class="hbox hcenter wp90 hgap20 tgap20 bgap20">
-          <div class="news-banner-txt"> Learn Secured Collaboration</div>
-          <div><a class="link-button">Coming Soon</a></div>
-        </div>
-      </div>
+      
 
 
+      
 
-      <!--- About Section -->
+          <!--- About Section -->
       <div class="hbox hcenter vReemo-blue-new-banner" >
         
         <div class="hbox wp90 hgap15">
@@ -987,7 +651,7 @@
           <div class="vbox vgap10 ">
             <div class="hbox hcenter">
                 <div class="reemosmalltext txt-col-white">
-                    @Reimo partners are important part of our journey. Our partner program provides exciting benefits and growth options to our partners. 
+                    Appcodesk partners are important part of our journey. Our partner program provides exciting benefits and growth options to our partners. 
                   </div>
             </div>
             
